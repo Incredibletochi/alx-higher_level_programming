@@ -2,5 +2,8 @@
 
 
 def print_list_integer(my_list=[]):
-    if my_list:
-        print('\n'.join(['{:d}'.format(n) for n in my_list]))
+
+    for num in my_list:
+        print('{:d}'.format(num))
+
+#    return print('{}'.format(my_list))
