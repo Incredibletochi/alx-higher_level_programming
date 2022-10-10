@@ -2,16 +2,16 @@
 
 
 def safe_print_list(my_list=[], x=0):
-    """
-    prints a list of anything, but only prints the integers
-    Returns the amount of integers printed
-    """
-    printed = 0
-    for i in range(x):
-        try:
-            print("{:d}".format(my_list[i]), end="")
-            printed += 1
-        except:
-            continue
-    print()
-    return printed
+    idx = 0
+
+    try:
+        for i in my_list:
+            if idx < x:
+                print('{}'.format(my_list[idx]), end='')
+                idx += 1
+
+        print()
+    except TypeError:
+        pass
+    finally:
+        return idx
